@@ -1,5 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^mail\.hashith\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.mail\.hashith\.com$
-RewriteRule ^/?$ "https\:\/\/srv3\.peekhosting\.com\:2096\/" [R=301,L]
