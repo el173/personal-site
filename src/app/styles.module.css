@@ -81,6 +81,84 @@
 .horizontalListItem:hover {
   color: #cc005f;
 }
-.faIconContainer {
-  width: 10px;
+.listText {
+  font-size: medium;
+}
+
+.helloText,
+.nameText,
+.titleText,
+.title::before,
+.title::after,
+.subTitle,
+.listText
+.bottomContainer,
+.horizontalListItem {
+  transition: all 0.3s ease; /* Add smooth transition to all properties */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .nameText {
+    font-size: 4rem;
+  }
+
+  .titleText {
+    font-size: 1rem;
+  }
+
+  .title::before,
+  .title::after {
+    font-size: 1rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .bottomContainer {
+    margin-top: -2rem;
+  }
+
+  .horizontalListItem {
+    margin-right: 5px;
+  }
+
+  .listText {
+    font-size: small;
+  }
+}
+
+/* Media query for very small screens */
+@media screen and (max-width: 480px) {
+  .nameText {
+    font-size: 3rem;
+  }
+
+  .titleText {
+    font-size: 0.8rem;
+  }
+
+  .title::before,
+  .title::after {
+    font-size: 0.8rem;
+  }
+
+  .subTitle {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .bottomContainer {
+    margin-top: -1rem;
+  }
+
+  .horizontalListItem {
+    margin-right: 3px;
+  }
+
+  .listText {
+    font-size: xx-small;
+  }
 }

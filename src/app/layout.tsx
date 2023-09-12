@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Hashith Karunarathne - EL173',
-  description: 'Personal portfolio of Hashith Karunarathne EL173',
+  description: 'Personal portfolio - Hashith Karunarathne EL173',
 }
 
 export default function RootLayout({
