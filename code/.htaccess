@@ -1,5 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^code\.hashith\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.code\.hashith\.com$
-RewriteRule ^/?$ "https\:\/\/github\.com\/el173" [R=301,L]

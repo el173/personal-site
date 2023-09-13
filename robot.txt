@@ -1,7 +1,0 @@
-
-
-User-agent: * 
-Disallow:
-
-Sitemap: https://hashith.com/sitemap.xml
-http://www.google.com/ping?sitemap=https://hashith.com/sitemap.xml
