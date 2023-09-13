@@ -7,7 +7,15 @@ function AnimatedBackground({ children }: React.PropsWithChildren<{}>) {
   const largeHeaderRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
-  const pointsRef = useRef<{ x: number; originX: number; y: number; originY: number; closest: any[] }[]>([]);
+  const pointsRef = useRef<{
+    circle?: any;
+    active?: number;
+    x: number;
+    originX: number;
+    y: number;
+    originY: number;
+    closest?: any[];
+  }[]>([]);
   const targetRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const animateHeaderRef = useRef<boolean>(true);
 
@@ -170,20 +178,28 @@ function AnimatedBackground({ children }: React.PropsWithChildren<{}>) {
       }
     };
 
-    function Circle(pos: { x: number; y: number }, rad: number, color: string) {
-      this.pos = pos || { x: 0, y: 0 };
-      this.radius = rad || 0;
-      this.color = color || '';
+    class Circle {
+      private pos: { x: number; y: number };
+      private radius: number;
+      private color: string;
+      private active: boolean;
     
-      this.draw = function () {
-        if (!this.active || !ctxRef.current) return;
-        ctxRef.current.beginPath();
-        ctxRef.current.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
-        ctxRef.current.fillStyle = 'rgba(156,217,249,' + this.active + ')';
-        ctxRef.current.fill();
-      };
+      constructor(pos: { x: number; y: number }, rad: number, color: string) {
+        this.pos = pos || { x: 0, y: 0 };
+        this.radius = rad || 0;
+        this.color = color || '';
+        this.active = true;
+      }
+    
+      draw(ctxRef: CanvasRenderingContext2D | null) {
+        if (!this.active || !ctxRef) return;
+    
+        ctxRef.beginPath();
+        ctxRef.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+        ctxRef.fillStyle = `rgba(156, 217, 249, ${this.active})`;
+        ctxRef.fill();
+      }
     }
-    
 
     const getDistance = (p1: any, p2: any) => {
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
@@ -196,13 +212,9 @@ function AnimatedBackground({ children }: React.PropsWithChildren<{}>) {
 
   useEffect(() => {
     const handleContextMenu = (e: Event) => {
-      e.preventDefault(); // Prevent the default right-click context menu
+      e.preventDefault();
     };
-
-    // Attach the event listener to the document
     document.addEventListener('contextmenu', handleContextMenu);
-
-    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
     };
