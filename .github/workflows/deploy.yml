@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - master # Modify this to match your main branch name
+      - main # Modify this to match your main branch name
 
 jobs:
   deploy:
@@ -18,15 +18,21 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install Yarn
+        run: |
+          npm install -g yarn
+      # Use the npm installer to install yarn globally
+
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
+      # Replace "npm install" with "yarn install"
 
       - name: Build React App
-        run: npm run build
+        run: yarn build
+      # Replace "npm run build" with "yarn build"
 
       - name: Deploy to S3
-        run: npm run deploy
-        
+        run: yarn deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
