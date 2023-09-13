@@ -1,4 +1,14 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+
+import {
+  IconStackOverflow,
+  IconBxlGithub,
+  IconLogoDocker,
+  IconLogoNpm,
+  IconBxlLinkedinSquare,
+  IconMedium,
+  IconEmailArrowRightOutline,
+} from './icons';
 
 export default function Home() {
   return (
@@ -19,37 +29,37 @@ export default function Home() {
         <div className={styles.horizontalList}>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://stackoverflow.com/users/5702705/el173"  rel="noopener noreferrer" target="_blank">
-              stackoverflow
+              <IconStackOverflow/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://code.hashith.com" rel="noopener noreferrer" target="_blank">
-              github
+              <IconBxlGithub/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://hub.docker.com/u/el173" rel="noopener noreferrer" target="_blank">
-              docker
+              <IconLogoDocker/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://www.npmjs.com/~el173" rel="noopener noreferrer" target="_blank">
-              npm
+              <IconLogoNpm/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://www.linkedin.com/in/hashithkarunarathne/" rel="noopener noreferrer" target="_blank">
-              linkedin
+              <IconBxlLinkedinSquare/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="https://hashithkarunarathne.medium.com/" rel="noopener noreferrer" target="_blank">
-              medium
+              <IconMedium/>
             </a>
           </span>
           <span className={styles.horizontalListItem}>
             <a className={styles.listText} href="mailto:info@hashith.com?Subject=Hello%20Hashith" target="_top">
-              mail
+              <IconEmailArrowRightOutline/>
             </a>
           </span>
         </div>
