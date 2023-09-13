@@ -91,6 +91,15 @@
   font-size: medium;
 }
 
+.horizontalListItem svg {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.horizontalListItem:hover svg {
+  transform: scale(1.5);
+}
+
 .helloText,
 .nameText,
 .titleText,
