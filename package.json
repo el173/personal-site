@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && aws s3 sync out/ s3://hkpsbucket"
+    "deploy": "aws s3 sync out/ s3://hkpsbucket"
   },
   "dependencies": {
     "@types/node": "20.6.0",
