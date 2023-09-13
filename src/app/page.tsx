@@ -10,9 +10,11 @@ import {
   IconEmailArrowRightOutline,
 } from './icons';
 
+import AnimatedBackground from './AnimatedBackground';
+
 export default function Home() {
   return (
-    <div>
+    <AnimatedBackground>
       <div className="flex justify-center items-center h-screen">
         <div className="text-center">
           <h5 className={styles.helloText}>Hello, World.</h5>
@@ -64,6 +66,6 @@ export default function Home() {
           </span>
         </div>
       </div>
-    </div>
+    </AnimatedBackground>
   );
 }
