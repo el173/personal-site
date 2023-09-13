@@ -33,7 +33,7 @@ export default function Home() {
             </a>
           </span>
           <span className={styles.horizontalListItem}>
-            <a className={styles.listText} href="https://code.hashith.com" rel="noopener noreferrer" target="_blank">
+            <a className={styles.listText} href="https://github.com/el173" rel="noopener noreferrer" target="_blank">
               <IconBxlGithub/>
             </a>
           </span>
