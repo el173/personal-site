@@ -20,7 +20,7 @@ export default function Home() {
           <h5 className={styles.helloText}>Hello, World.</h5>
           <h1 className={styles.nameText}>I&apos;m Hashith Karunarathne</h1>
           <p className={styles.titleText}>
-            <span className={styles.title}>Full Stack Developer</span>
+            <span className={styles.title}>Mobile(React Native) | Micro Frontend | Full Stack | Cloud | Microservice</span>
           </p>
           <p className={styles.subTitle}>
             <span><i>Focus</i> on <b>BigPicture</b>; $yntax doesn&apos;t matter</span>
