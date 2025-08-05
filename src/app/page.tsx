@@ -18,12 +18,12 @@ export default function Home() {
       <div className="flex justify-center items-center h-screen">
         <div className="text-center">
           <h5 className={styles.helloText}>Hello, World.</h5>
-          <h1 className={styles.nameText}>I&apos;m Hashith Karunarathne</h1>
+          <h1 className={styles.nameText}>I&apos;m Hashith <br/> Karunarathne</h1>
           <p className={styles.titleText}>
             <span className={styles.title}>Full Stack Developer</span>
           </p>
           <p className={styles.subTitle}>
-            <span><i>Focus</i> on <b>BigPicture</b>; $yntax doesn&apos;t matter</span>
+            <span><i>$yntax</i> is Temporary. <b>Vision</b> is Everything.</span>
           </p>
         </div>
       </div>
