@@ -62,12 +62,11 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: -3rem;
+  margin-top: -7rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .horizontalList {
   display: flex;
   flex-direction: row;
@@ -166,7 +165,7 @@
   }
 
   .bottomContainer {
-    margin-top: -1rem;
+    margin-top: -3rem;
   }
 
   .horizontalListItem {
