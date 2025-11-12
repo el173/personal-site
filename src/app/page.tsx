@@ -60,7 +60,7 @@ export default function Home() {
             </a>
           </span>
           <span className={styles.horizontalListItem}>
-            <a className={styles.listText} href="mailto:hashithkarunarathne@live.com?Subject=Hello%20Hashith" target="_top">
+            <a className={styles.listText} href="mailto:hello@hashith.com?Subject=Hello%20Hashith" target="_top">
               <IconEmailArrowRightOutline/>
             </a>
           </span>
